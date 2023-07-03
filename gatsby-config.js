@@ -4,31 +4,60 @@
 module.exports = {
   siteMetadata: {
     title: `Rent a Sim`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ["gatsby-plugin-styled-components", {
-    resolve: 'gatsby-plugin-google-analytics',
-    options: {
-      "trackingId": "abc123"
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "images",
-      "path": "./src/images/"
+  plugins: [
+    "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: { trackingId: "abc123" },
     },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+    "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/assets/images/icon.png",
+      },
     },
-    __key: "pages"
-  }]
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/assets/images/",
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`urbanist\:400,500,600,700,800,900`],
+        display: "swap",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-module-resolver",
+      options: {
+        root: "./src",
+        aliases: {
+          "#assets": "./assets",
+          "#base": "./components/base",
+          "#features": "./components/features",
+          "#helpers": "./helpers",
+          "#root": "./",
+        },
+      },
+    },
+  ],
 };

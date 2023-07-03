@@ -1,0 +1,234 @@
+@layer reset, color, typography;
+
+@layer reset {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+
+@layer color {
+  :root {
+    --color-blue-darkest: #1e242c;
+    --color-blue-darker: #3d4d62;
+    --color-blue-dark: #3a639b;
+    --color-blue-default: #4281d4;
+    --color-blue-light: #76a8eb;
+    --color-blue-lighter: #a0c7fa;
+    --color-blue-lightest: #d5e5fa;
+
+    --color-gray-default: #949494;
+    --color-gray-light: #bdbdbd;
+    --color-gray-lighter: #d9d9d9;
+    --color-gray-lightest: #f0f0f0;
+
+    --color-green-default: #69a339;
+    --color-green-light: #91c666;
+    --color-green-lightest: #deefcf;
+
+    --color-yellow-default: #fde400;
+
+    --color-black: #2e2e2e;
+    --color-white: #ffffff;
+
+    --palette-primary__default: var(--color-green-default);
+    --palette-primary__light: var(--color-green-lightest);
+
+    --palette-secondary__dark: var(--color-blue-darker);
+    --palette-secondary__default: var(--color-blue-dark);
+    --palette-secondary__light: var(--color-blue-default);
+
+    --palette-text__default: var(--color-blue-darkest);
+
+    --palette-background__default: var(--color-white);
+    --palette-background__light: var(--color-gray-lightest);
+    --palette-border__default: var(--color-yellow-default);
+  }
+}
+
+@layer typography {
+  :root {
+    --fs-h1: 3.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.5rem;
+    --fs-h5: 1rem;
+    --fs-h6: 0.875rem;
+    --fs-paragraph: 1rem;
+    --fs-small: 0.875rem;
+
+    --primary-font: "Urbanist", sans-serif;
+  }
+
+  html,
+  body,
+  input {
+    font-family: var(--primary-font);
+
+    color: var(--palette-text__default);
+  }
+
+  h2 {
+    font-style: italic;
+    font-weight: 900;
+    font-size: var(--fs-h2);
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: var(--fs-h3);
+    font-style: italic;
+    font-weight: 900;
+  }
+
+  p {
+    font-size: var(--fs-paragraph);
+    line-height: 1.6;
+  }
+
+  @media (min-width: 700px) {
+    :root {
+      --fs-h1: 4rem;
+      --fs-h2: 3rem;
+      --fs-h3: 2rem;
+      --fs-h4: 1.5rem;
+      --fs-h5: 1rem;
+      --fs-h6: 0.875rem;
+      --fs-paragraph: 1rem;
+      --fs-small: 0.875rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    :root {
+      --fs-h1: 4rem;
+      --fs-h2: 3rem;
+      --fs-h3: 2rem;
+      --fs-h4: 1.5rem;
+      --fs-h5: 1rem;
+      --fs-h6: 0.875rem;
+      --fs-paragraph: 1rem;
+      --fs-small: 0.875rem;
+    }
+  }
+}
