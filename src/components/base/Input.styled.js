@@ -5,8 +5,6 @@ const Input = styled.input`
   height: 2.5rem;
   padding: 0.25rem 1rem;
 
-  font-size: 1rem;
-
   background: var(--color-blue-darkest);
   border: 1px solid var(--color-gray-default);
   border-radius: 0.25rem;

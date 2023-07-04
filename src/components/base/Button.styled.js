@@ -7,7 +7,6 @@ const Button = styled.button`
   color: var(--color-white);
   font-style: normal;
   font-weight: 700;
-  font-size: 1rem;
   letter-spacing: 1px;
   line-height: 1.6;
   text-decoration: none;

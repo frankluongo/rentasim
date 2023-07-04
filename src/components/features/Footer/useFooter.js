@@ -4,7 +4,7 @@ export default function useFooter() {
     columnOne: {
       title: "rent•a•sim",
       description:
-        "Putting a little mission statement here would be a great idea. It just needs to be a sentence or two about your goals with the business ",
+        "Rent-a-Sim adds life to your events. Our goal is to be an extension of the positive environment you already created by providing a unique, wherever you may be, experience for sports, technology and competition. At Rent-a-Sim, we bring the fun to you!",
       email: "info@rentasim.co",
       phone: "845.596.9017",
     },

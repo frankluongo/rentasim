@@ -15,7 +15,7 @@ export default function ValueProps() {
     <Container $row="1rem">
       <Column as="header" $sm="span 12">
         <h2 style={{ color: `var(--palette-primary__default)` }}>
-          why we're perfect for your next event
+          we're perfect for your next event
         </h2>
       </Column>
       <Styled.LineWrapper $sm="1 / span 2" $md="7 / span 1" $lg="5 / span 1">
@@ -45,7 +45,9 @@ export default function ValueProps() {
             <Styled.Heading>{item.heading}</Styled.Heading>
             <Styled.Description>{item.description}</Styled.Description>
           </Column>
-          <Spacer as={Column} $sm="span 12" $top="3rem" $lgTop="6rem" />
+          {!item.last && (
+            <Spacer as={Column} $sm="span 12" $top="3rem" $lgTop="6rem" />
+          )}
         </React.Fragment>
       ))}
     </Container>

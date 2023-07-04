@@ -17,16 +17,13 @@ export const CopyrightColumn = styled(Column)`
 
 export const CopyrightText = styled.small`
   color: var(--color-white);
-  font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.2;
-
-  @media (min-width: 700px) {
-    font-size: 0.875rem;
-  }
 `;
 
 export const Footer = styled.footer`
+  position: relative;
+
   padding-top: 2rem;
 
   background-color: var(--color-blue-darkest);
@@ -38,6 +35,22 @@ export const FooterColumn = styled(Column)`
   gap: 1rem;
 
   color: var(--color-white);
+`;
+
+export const FooterDivider = styled.div`
+  left: 0;
+  position: absolute;
+  top: 6.75rem;
+
+  height: 0.25rem;
+  width: 24.5%;
+
+  background: var(--color-blue-default);
+  border-radius: 0 0.25rem 0.25rem 0;
+
+  @media (max-width: 899.5px) {
+    display: none;
+  }
 `;
 
 export const FooterForm = styled.form`
@@ -59,12 +72,4 @@ export const FooterLink = styled.a.attrs({
   font-style: italic;
   letter-spacing: 0.5px;
   text-decoration: none;
-`;
-
-export const FooterText = styled.p`
-  font-size: 1rem;
-
-  @media (min-width: 700px) {
-    font-size: 1.25rem;
-  }
 `;

@@ -1,15 +1,15 @@
 import { styled } from "styled-components";
-import Column from "#base/Column.styled";
 
-export const Description = styled.p`
+import Column from "#base/Column.styled";
+import Typography from "#base/Typography.styled";
+
+export const Description = styled(Typography).attrs({
+  as: "p",
+  $variant: "h5",
+})`
   margin-top: 0.5rem;
 
-  font-size: 1rem;
   font-style: italic;
-
-  @media (min-width: 900px) {
-    font-size: 1.5rem;
-  }
 `;
 
 export const Heading = styled.h3`

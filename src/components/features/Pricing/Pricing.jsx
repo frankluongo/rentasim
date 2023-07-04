@@ -22,7 +22,7 @@ export default function Pricing() {
           </small>
         </Styled.OptionTitle>
         <Styled.OptionDescription>
-          cost: <strong>$2000</strong>
+          cost: <strong>$2,000</strong>
         </Styled.OptionDescription>
       </Styled.Option>
       <Styled.Option as="article" $sm="span 12" $md="span 6" $lg="span 4">
@@ -35,7 +35,7 @@ export default function Pricing() {
           </small>
         </Styled.OptionTitle>
         <Styled.OptionDescription>
-          cost: <strong>$2500</strong>
+          cost: <strong>$2,500</strong>
         </Styled.OptionDescription>
       </Styled.Option>
       <Styled.Option as="article" $sm="span 12" $md="span 6" $lg="span 4">

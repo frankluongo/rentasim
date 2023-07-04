@@ -6,6 +6,7 @@ import Column from "#base/Column.styled";
 import Container from "#base/Container.styled";
 import Input from "#base/Input.styled";
 import Spacer from "#base/Spacer.styled";
+import Typography from "#base/Typography.styled";
 
 import Icon from "#features/Icon/Icon";
 import LogoName from "#features/LogoName/LogoName";
@@ -21,12 +22,13 @@ export default function Footer() {
         <Column as="h2" $sm="span 12" style={{ color: "var(--color-white)" }}>
           {data.title}
         </Column>
+        <Styled.FooterDivider />
 
         <Styled.FooterColumn $sm="span 12" $md="span 6" $lg="1 / span 3">
           <h3 style={{ color: "var(--palette-primary__default" }}>
             {data.columnOne.title}
           </h3>
-          <Styled.FooterText>{data.columnOne.description}</Styled.FooterText>
+          <p>{data.columnOne.description}</p>
           <Styled.FooterLink href={`mailto:${data.columnOne.email}`}>
             <Icon icon="Envelope" />
             {data.columnOne.email}
@@ -39,7 +41,9 @@ export default function Footer() {
 
         <Styled.FooterColumn $sm="span 12" $md="8 / span 5" $lg="5 / span 4">
           <h3>{data.columnTwo.title}</h3>
-          <Styled.FooterText>{data.columnTwo.description}</Styled.FooterText>
+          <Typography as="p" $variant="h5">
+            {data.columnTwo.description}
+          </Typography>
           <Styled.FooterForm onSubmit={submitHandler}>
             <Input
               type="email"

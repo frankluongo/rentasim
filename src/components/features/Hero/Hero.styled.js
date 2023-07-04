@@ -2,14 +2,26 @@ import { styled } from "styled-components";
 
 import Column from "#base/Column.styled";
 import Container from "#base/Container.styled";
+import Typography from "#base/Typography.styled";
+
+export const HeroArrow = styled.svg`
+  bottom: 0;
+  position: absolute;
+  right: 0;
+
+  @media (max-width: 1299.5px) {
+    display: none;
+  }
+`;
 
 export const HeroContainer = styled(Container)`
   position: relative;
   z-index: 2;
 
-  padding-block: 2rem;
-
   @media (max-width: 899.5px) {
+    padding-block: 1rem;
+    padding-inline: 1rem;
+
     background-color: rgba(222, 239, 207, 0.85);
   }
 `;
@@ -35,7 +47,11 @@ export const HeroWrapper = styled.div`
 export const HeroColumn = styled(Column)`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+
+  @media (min-width: 700px) {
+    gap: 1.5rem;
+  }
 `;
 
 export const HeroImage = styled.div`
@@ -76,7 +92,7 @@ export const HeroTextWrapper = styled.div`
   gap: 1rem;
 `;
 
-export const HeroText = styled.p`
+export const HeroText = styled(Typography)`
   color: var(--color-green-default);
   font-style: italic;
   font-weight: 600;
