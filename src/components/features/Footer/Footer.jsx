@@ -1,15 +1,14 @@
 import React from "react";
 import useFooter from "./useFooter";
 
-import Button from "#base/Button.styled";
 import Column from "#base/Column.styled";
 import Container from "#base/Container.styled";
-import Input from "#base/Input.styled";
 import Spacer from "#base/Spacer.styled";
 import Typography from "#base/Typography.styled";
 
 import Icon from "#features/Icon/Icon";
 import LogoName from "#features/LogoName/LogoName";
+import SubscribeForm from "#features/SubscribeForm/SubscribeForm";
 
 import * as Styled from "./Footer.styled";
 
@@ -43,12 +42,7 @@ export default function Footer() {
           <Typography as="p" $variant="h5">
             {data.columnTwo.description}
           </Typography>
-          <Styled.FooterForm data-netlify={true} method="post" name="subscribe">
-            <Input type="email" name="email" placeholder="Email" />
-            <div>
-              <Button type="submit">sign up</Button>
-            </div>
-          </Styled.FooterForm>
+          <SubscribeForm />
         </Styled.FooterColumn>
 
         <Styled.FooterColumn $sm="span 12" $lg="10 / span 3">

@@ -24,6 +24,7 @@
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-mdx": "^5.11.0",
     "gatsby-plugin-module-resolver": "^1.0.3",
+    "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-plugin-sitemap": "^6.11.0",
     "gatsby-plugin-styled-components": "^6.11.0",

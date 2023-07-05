@@ -53,12 +53,6 @@ export const FooterDivider = styled.div`
   }
 `;
 
-export const FooterForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-
 export const FooterLink = styled.a.attrs({
   rel: "noopener noreferrer",
   target: "_blank",
