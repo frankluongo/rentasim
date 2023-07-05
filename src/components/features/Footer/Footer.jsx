@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import useFooter from "./useFooter";
 
 import Button from "#base/Button.styled";
@@ -14,7 +14,6 @@ import LogoName from "#features/LogoName/LogoName";
 import * as Styled from "./Footer.styled";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
   const data = useFooter();
   return (
     <Styled.Footer>
@@ -44,13 +43,8 @@ export default function Footer() {
           <Typography as="p" $variant="h5">
             {data.columnTwo.description}
           </Typography>
-          <Styled.FooterForm onSubmit={submitHandler}>
-            <Input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={changeHandler}
-            />
+          <Styled.FooterForm data-netlify={true} method="post" name="subscribe">
+            <Input type="email" name="email" placeholder="Email" />
             <div>
               <Button type="submit">sign up</Button>
             </div>
@@ -81,13 +75,4 @@ export default function Footer() {
       </Styled.Copyright>
     </Styled.Footer>
   );
-
-  function changeHandler(e) {
-    setEmail(e.target.value);
-  }
-
-  function submitHandler(e) {
-    e.preventDefault();
-    console.log(email);
-  }
 }
