@@ -17,12 +17,13 @@ export default function SubscribeForm(props) {
     <>
       <Styled.SubscribeForm
         action="/"
-        netlify="true"
+        data-netlify="true"
         method="post"
         name="subscribe"
         onSubmit={submitHandler}
         {...props}
       >
+        <input type="hidden" name="form-name" value="subscribe" />
         <Input
           type="email"
           name="email"
