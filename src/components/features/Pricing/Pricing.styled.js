@@ -1,5 +1,12 @@
 import { styled } from "styled-components";
 import Column from "#base/Column.styled";
+import Wrapper from "#base/Wrapper.styled";
+
+export const Content = styled(Column)`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
 
 export const Header = styled.header`
   grid-column: 1 / -1;
@@ -46,4 +53,12 @@ export const OptionTitle = styled.h3`
     font-size: 1em;
     line-height: 0.875;
   }
+`;
+
+export const Pricing = styled(Wrapper)`
+  background: radial-gradient(75% 75% at 50% 50%, #ffffff 0%, #deefcf 100%);
+`;
+
+export const Subheading = styled.h3`
+  color: var(--palette-primary__default);
 `;

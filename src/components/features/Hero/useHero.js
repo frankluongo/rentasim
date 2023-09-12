@@ -1,21 +1,14 @@
-import { useStaticQuery, graphql } from "gatsby";
+const BASE_URL = "https://www.youtube.com";
 
 export default function useHero() {
-  let data = null;
-  try {
-    const image = useStaticQuery(graphql`
-      query HeroImage {
-        golfer: file(relativePath: { eq: "golfer.jpeg" }) {
-          childImageSharp {
-            gatsbyImageData(width: 1920)
-          }
-        }
-      }
-    `);
-    data = image;
-  } catch (error) {
-    console.error(error);
-  }
-
-  return data;
+  const id = "Ew44w6_Xxr4";
+  const params = new URLSearchParams({
+    controls: 0,
+    fs: 0,
+    mute: 1,
+    autoplay: 1,
+    loop: 1,
+    playlist: id,
+  });
+  return `${BASE_URL}/embed/${id}?${params.toString()}`;
 }

@@ -4,19 +4,13 @@ import Column from "#base/Column.styled";
 import Container from "#base/Container.styled";
 import Typography from "#base/Typography.styled";
 
-export const HeroArrow = styled.svg`
-  bottom: 0;
-  position: absolute;
-  right: 0;
-
-  @media (max-width: 1299.5px) {
-    display: none;
-  }
-`;
-
 export const HeroContainer = styled(Container)`
   position: relative;
   z-index: 2;
+
+  margin-bottom: 15dvh;
+  max-width: none;
+  padding-inline: 0;
 
   @media (max-width: 899.5px) {
     padding-block: 1rem;
@@ -31,16 +25,14 @@ export const HeroWrapper = styled.div`
 
   display: flex;
   align-items: center;
-  min-height: 30rem;
+  /* min-height: 74.25dvh; */
+  min-height: 52.65dvw;
+  max-height: 90dvh;
 
   background: var(--color-green-lightest);
 
   @media (max-width: 899.5px) {
     padding-inline: 2rem;
-  }
-
-  @media (min-width: 900px) {
-    min-height: 40rem;
   }
 `;
 
@@ -48,6 +40,8 @@ export const HeroColumn = styled(Column)`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  background-color: #fff;
 
   @media (min-width: 700px) {
     gap: 1.5rem;
@@ -59,13 +53,11 @@ export const HeroImage = styled.div`
   position: absolute;
   z-index: 1;
 
-  [data-gatsby-image-wrapper] {
+  iframe {
     height: 100%;
     width: 100%;
-  }
 
-  @media (min-width: 900px) {
-    left: 42.5%;
+    pointer-events: none;
   }
 `;
 
@@ -97,4 +89,17 @@ export const HeroText = styled(Typography)`
   font-style: italic;
   font-weight: 600;
   line-height: 1.6;
+`;
+
+export const Overlay = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  grid-column: 9 / span 4;
+  padding: 3rem;
+
+  background: white;
+  border-radius: 1rem 0 0 3rem;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
 `;

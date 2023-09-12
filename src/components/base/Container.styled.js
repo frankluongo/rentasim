@@ -8,6 +8,7 @@ const Container = styled.section`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1rem;
   row-gap: ${(props) => props.$row || 0};
+  align-items: ${(p) => p.$align || "normal"};
 `;
 
 export default Container;

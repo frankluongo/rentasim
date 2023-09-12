@@ -12,14 +12,14 @@ const Button = styled.button`
   text-decoration: none;
 
   appearance: none;
-  background: var(--palette-secondary__dark);
+  background: var(--palette-secondary__default);
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background 150ms ease-in-out, color 150ms ease-in-out;
 
   &:is(:hover, :focus) {
-    background: var(--palette-secondary__light);
+    background: var(--palette-secondary__dark);
   }
 
   &:is(:disabled, [disabled]) {
