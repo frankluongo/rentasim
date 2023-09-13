@@ -23,10 +23,14 @@ export default function Footer() {
         <Styled.FooterDivider />
 
         <Styled.FooterColumn $sm="span 12" $md="span 6" $lg="1 / span 3">
-          <h3 style={{ color: "var(--palette-primary__default" }}>
+          <Typography
+            as="h3"
+            $variant="h3"
+            style={{ color: "var(--palette-primary__default" }}
+          >
             {data.columnOne.title}
-          </h3>
-          <p>{data.columnOne.description}</p>
+          </Typography>
+          <Typography as="p">{data.columnOne.description}</Typography>
           <Styled.FooterLink href={`mailto:${data.columnOne.email}`}>
             <Icon icon="Envelope" />
             {data.columnOne.email}
