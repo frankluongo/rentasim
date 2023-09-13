@@ -14,7 +14,7 @@ export default function AboutUs() {
 
   return (
     <Styled.Wrapper>
-      <Container $row="1rem">
+      <Container $row="1rem" $align="center">
         <ContentCol $sm="span 12" $md="span 6">
           <h2>about us</h2>
           <Typography as="p" $variant="h5">
