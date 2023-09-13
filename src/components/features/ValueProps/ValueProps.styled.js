@@ -2,8 +2,16 @@ import { styled } from "styled-components";
 
 import { GatsbyImage } from "gatsby-plugin-image";
 
+import BaseWrapper from "#base/Wrapper.styled";
 import Column from "#base/Column.styled";
+import ContentColumn from "#base/ContentColumn.styled";
 import Typography from "#base/Typography.styled";
+
+export const ColumnReverse = styled(ContentColumn)`
+  @media (max-width: 899.5px) {
+    order: 1;
+  }
+`;
 
 export const Description = styled(Typography).attrs({
   as: "p",
@@ -87,4 +95,10 @@ export const NumberLineWrapper = styled.div`
 
 export const Subheading = styled.h3`
   color: var(--palette-primary__default);
+`;
+
+export const Wrapper = styled(BaseWrapper)`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 `;

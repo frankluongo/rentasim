@@ -6,7 +6,7 @@ export default function useFooter() {
       description:
         "Rent-a-Sim adds life to your events. Our goal is to be an extension of the positive environment you already created by providing a unique, wherever you may be, experience for sports, technology and competition. At Rent-a-Sim, we bring the fun to you!",
       email: "info@rentasim.co",
-      phone: "845.596.9017",
+      phone: "267-225-2688",
     },
     columnTwo: {
       title: "get updates!",

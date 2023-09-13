@@ -28,7 +28,7 @@ export default function Pricing() {
           <ContactForm />
         </Styled.Content>
         <Styled.Content $sm="span 12" $md="span 6" $lg="8 / span 5">
-          <Styled.Subheading>areas we serve (roughly)</Styled.Subheading>
+          <Styled.Subheading>areas we serve (approximately)</Styled.Subheading>
           <GatsbyImage image={getImage(image)} alt="Rent a sim" />
         </Styled.Content>
       </Container>

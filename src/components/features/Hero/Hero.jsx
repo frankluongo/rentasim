@@ -11,24 +11,8 @@ import useHero from "./useHero";
 export default function Hero() {
   const url = useHero();
   return (
-    <Styled.HeroWrapper>
-      <Styled.HeroContainer $row="1rem">
-        <Styled.Overlay>
-          <LogoFull
-            style={{ maxWidth: "100%", height: "auto" }}
-            title="Rent a sim; we bring the fun to you!"
-          />
-          <Styled.HeroText $variant="p">
-            We bring a self-contained, state of the art simulator with the
-            ability to set up anywhere within the tri-state area!
-          </Styled.HeroText>
-          <Styled.HeroText>
-            email us to reserve yours or learn more!
-          </Styled.HeroText>
-          <EmailLink Component={Button}>info@rentasim.co</EmailLink>
-        </Styled.Overlay>
-      </Styled.HeroContainer>
-      <Styled.HeroImage>
+    <Styled.HeroContainer $row="1rem">
+      <Styled.HeroImage $md="span 8">
         <iframe
           width="560"
           height="315"
@@ -38,6 +22,20 @@ export default function Hero() {
           allowFullScreen={true}
         ></iframe>
       </Styled.HeroImage>
-    </Styled.HeroWrapper>
+      <Styled.Overlay>
+        <LogoFull
+          style={{ maxWidth: "100%", height: "auto" }}
+          title="Rent a sim; we bring the fun to you!"
+        />
+        <Styled.HeroText $variant="p">
+          We bring a self-contained, state of the art simulator with the ability
+          to set up anywhere within the tri-state area!
+        </Styled.HeroText>
+        <Styled.HeroText>
+          email us to reserve yours or learn more!
+        </Styled.HeroText>
+        <EmailLink Component={Button}>info@rentasim.co</EmailLink>
+      </Styled.Overlay>
+    </Styled.HeroContainer>
   );
 }
