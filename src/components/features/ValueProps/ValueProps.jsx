@@ -47,7 +47,7 @@ export default function ValueProps() {
           <Styled.Image image={getImage(images.soccer2)} alt="Rent a sim" />
         </Styled.ColumnReverse>
         <ContentColumn $sm="span 12" $md="span 6">
-          <Styled.Subheading>We have something for everyone</Styled.Subheading>
+          <Styled.Subheading>we have something for everyone</Styled.Subheading>
           <Typography as="p" $variant="h5">
             we have golf, soccer, baseball, hockey, zombies, etc. that can be
             switched seamlessly!
