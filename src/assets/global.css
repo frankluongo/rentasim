@@ -125,14 +125,24 @@
     border-collapse: collapse;
     border-spacing: 0;
   }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer color {
   :root {
     --color-blue-darkest: #1e242c;
-    --color-blue-darker: #3d4d62;
-    --color-blue-dark: #3a639b;
-    --color-blue-default: #4281d4;
+    --color-blue-darker: #0d66a6;
+    --color-blue-dark: #1c7ec5;
+    --color-blue-default: #2794e3;
     --color-blue-light: #76a8eb;
     --color-blue-lighter: #a0c7fa;
     --color-blue-lightest: #d5e5fa;
@@ -169,7 +179,7 @@
 @layer typography {
   :root {
     --fs-h1: 2.75rem;
-    --fs-h2: 2rem;
+    --fs-h2: 1.75rem;
     --fs-h3: 1.5rem;
     --fs-h4: 1.25rem;
     --fs-h5: 1.125rem;
@@ -182,7 +192,9 @@
 
   html,
   body,
-  input {
+  input,
+  textarea,
+  button {
     font-family: var(--primary-font);
 
     color: var(--palette-text__default);

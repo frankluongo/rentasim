@@ -1,55 +1,55 @@
 import { useStaticQuery, graphql } from "gatsby";
 
-const items = [
-  {
-    image: "party",
-    number: "01",
-    heading: "we come to you",
-    description:
-      "Indoor or outdoor, bachelor party or family party, trade shows or corporate events, we can cater to your event needs. Work with our team to plan the perfect event for you!",
-  },
-  {
-    image: "zombies",
-    number: "02",
-    heading: "we've got something for everyone",
-    description:
-      "Whether you're a golf fiend, training for a sport, or want to take on zombies, our simulators have something for everyone!",
-  },
-  {
-    image: "cs",
-    number: "03",
-    heading: "our service is top notch",
-    description:
-      "Our team will be there to ensure 100% up-time, on-time set up and receiving the highest simulator functionality",
-    last: true,
-  },
-];
-
 export default function useValueProps() {
-  let data = null;
+  let images = null;
   try {
-    const images = useStaticQuery(graphql`
-      query ValuePropsImages {
-        party: file(relativePath: { eq: "party.jpg" }) {
+    const query = useStaticQuery(graphql`
+      query {
+        golfer: file(relativePath: { eq: "golfer.jpg" }) {
           childImageSharp {
-            gatsbyImageData(width: 480)
+            gatsbyImageData(width: 640)
           }
         }
-        zombies: file(relativePath: { eq: "zombies.jpeg" }) {
+        hockey2: file(relativePath: { eq: "hockey-2.jpg" }) {
           childImageSharp {
-            gatsbyImageData(width: 480)
+            gatsbyImageData(width: 640)
           }
         }
-        cs: file(relativePath: { eq: "customer-service.jpeg" }) {
+        inside: file(relativePath: { eq: "inside.jpg" }) {
           childImageSharp {
-            gatsbyImageData(width: 480)
+            gatsbyImageData(width: 640)
+          }
+        }
+        movie: file(relativePath: { eq: "movie.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(width: 640)
+          }
+        }
+        outside: file(relativePath: { eq: "outside-1.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(width: 640)
+          }
+        }
+        soccer2: file(relativePath: { eq: "soccer-2.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(width: 640)
+          }
+        }
+        shooter: file(relativePath: { eq: "shootemup.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(width: 640)
+          }
+        }
+        zombies: file(relativePath: { eq: "zombies.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(width: 640)
           }
         }
       }
     `);
-    data = images;
+    images = query;
   } catch (error) {
     console.error(error);
   }
-  return { data, items };
+  return images;
 }

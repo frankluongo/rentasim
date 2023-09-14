@@ -14,9 +14,7 @@ export default function BookNow() {
           <h2 style={{ color: `var(--palette-primary__default)` }}>
             what are you waiting for?
           </h2>
-          <EmailLink Component={Button} as="a" href="mailto:info@rentasim.co">
-            email us to book now
-          </EmailLink>
+          <EmailLink Component={Button}>email us to book now</EmailLink>
         </Styled.Inner>
       </Container>
     </Styled.Wrapper>

@@ -1,7 +1,17 @@
 import { styled } from "styled-components";
 
+import { GatsbyImage } from "gatsby-plugin-image";
+
+import BaseWrapper from "#base/Wrapper.styled";
 import Column from "#base/Column.styled";
+import ContentColumn from "#base/ContentColumn.styled";
 import Typography from "#base/Typography.styled";
+
+export const ColumnReverse = styled(ContentColumn)`
+  @media (max-width: 899.5px) {
+    order: 1;
+  }
+`;
 
 export const Description = styled(Typography).attrs({
   as: "p",
@@ -23,12 +33,14 @@ export const Heading = styled.h3`
   }
 `;
 
-export const Image = styled(Column)`
+const opts = {
+  shouldForwardProp: (p) => p !== "image",
+};
+
+export const Image = styled(GatsbyImage, opts)`
   position: relative;
 
-  height: 12rem;
-
-  border-radius: 2rem;
+  border-radius: 1rem;
   overflow: hidden;
 
   [data-gatsby-image-wrapper] {
@@ -37,10 +49,6 @@ export const Image = styled(Column)`
 
     height: 100%;
     width: 100%;
-  }
-
-  @media (min-width: 900px) {
-    height: 17.5rem;
   }
 `;
 
@@ -83,4 +91,14 @@ export const NumberLineWrapper = styled.div`
   position: relative;
 
   height: 100%;
+`;
+
+export const Subheading = styled.h3`
+  color: var(--palette-primary__default);
+`;
+
+export const Wrapper = styled(BaseWrapper)`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 `;

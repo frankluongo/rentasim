@@ -4,3 +4,7 @@ public
 
 # Local Netlify folder
 .netlify
+
+.env
+.env.*
+.DS_Store
