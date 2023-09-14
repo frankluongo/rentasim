@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 
 const Button = styled.button`
-  display: inline-block;
+  align-items: center;
+  display: inline-flex;
   padding: 0.75rem 1.5rem;
 
   color: var(--color-white);

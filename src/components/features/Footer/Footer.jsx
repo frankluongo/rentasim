@@ -15,12 +15,11 @@ import * as Styled from "./Footer.styled";
 export default function Footer() {
   const data = useFooter();
   return (
-    <Styled.Footer>
+    <Styled.Footer id="get-in-touch">
       <Container as="section" $row="2rem">
         <Column as="h2" $sm="span 12" style={{ color: "var(--color-white)" }}>
           {data.title}
         </Column>
-        <Styled.FooterDivider />
 
         <Styled.FooterColumn $sm="span 12" $md="span 6" $lg="1 / span 3">
           <Typography

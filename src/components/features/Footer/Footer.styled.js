@@ -37,22 +37,6 @@ export const FooterColumn = styled(Column)`
   color: var(--color-white);
 `;
 
-export const FooterDivider = styled.div`
-  left: 0;
-  position: absolute;
-  top: 6.75rem;
-
-  height: 0.25rem;
-  width: 24.5%;
-
-  background: var(--color-blue-default);
-  border-radius: 0 0.25rem 0.25rem 0;
-
-  @media (max-width: 899.5px) {
-    display: none;
-  }
-`;
-
 export const FooterLink = styled.a.attrs({
   rel: "noopener noreferrer",
   target: "_blank",

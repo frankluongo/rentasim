@@ -13,7 +13,7 @@ import * as Styled from "./ValueProps.styled";
 export default function ValueProps() {
   const images = useValueProps();
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper id="how-it-works">
       <Container $row="2rem" $align="center">
         <Column as="header" $sm="span 12">
           <h2>how it all works</h2>

@@ -13,7 +13,7 @@ export default function AboutUs() {
   const image = useAboutUs();
 
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper id="our-company">
       <Container $row="1rem" $align="center">
         <ContentCol $sm="span 12" $md="span 6">
           <h2>about us</h2>
@@ -29,12 +29,6 @@ export default function AboutUs() {
             innovative ways. One of the best ways to get to know someone is by
             competing and having fun with each other in a casual and informal
             setting, hence why Rent-a-Sim was born.
-          </Typography>
-          <Typography as="p" $variant="p">
-            We noticed there is a lack of accessibility for individuals and
-            companies to the game, and also to the latest experience with
-            technology. We believe in community and greatly enjoy bringing
-            people together to create memorable moments.
           </Typography>
           <Typography as="p" $variant="p">
             Our hope is that Rent a sim will build lasting relationships with

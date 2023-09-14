@@ -11,7 +11,7 @@ import useHero from "./useHero";
 export default function Hero() {
   const url = useHero();
   return (
-    <Styled.HeroContainer $row="1rem">
+    <Styled.HeroContainer $row="1rem" id="home">
       <Styled.HeroImage $md="span 8">
         <iframe
           width="560"
