@@ -9,7 +9,6 @@ import useHeader from "./useHeader";
 
 export default function Header() {
   const { navigation, socials } = useHeader();
-  console.log(navigation, socials);
   return (
     <Styled.Header>
       <Styled.Inner $row="1rem">
