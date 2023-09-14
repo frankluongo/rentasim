@@ -35,6 +35,8 @@ export const HeroImage = styled(Column)`
 
     height: 100%;
     width: 100%;
+
+    pointer-events: none;
   }
 `;
 
