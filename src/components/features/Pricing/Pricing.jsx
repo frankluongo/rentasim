@@ -18,7 +18,7 @@ export default function Pricing() {
         <Column as="header" $sm="span 12">
           <h2>can't wait? book now!</h2>
           <Typography as="p" $variant="h5">
-            Sessions start at $2,000
+            Sessions start at $2,500
           </Typography>
         </Column>
         <Styled.Content $sm="span 12" $md="span 6" $lg="span 6">
