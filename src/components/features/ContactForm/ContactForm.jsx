@@ -2,9 +2,13 @@ import React from "react";
 
 import Button from "#base/Button.styled";
 
+import useContactForm from "./useContactForm";
+
 import * as Styled from "./ContactForm.styled";
 
 export default function ContactForm() {
+  const { handleForm, status } = useContactForm();
+
   return (
     <Styled.Form onSubmit={handleForm}>
       <Styled.Label>
@@ -32,25 +36,10 @@ export default function ContactForm() {
           placeholder="anything we need to know?"
         />
       </Styled.Label>
-      <Button type="submit">send your message</Button>
+      <div>
+        <Button type="submit">send your message</Button>
+      </div>
+      {status.msg && <Styled.Message>{status.msg}</Styled.Message>}
     </Styled.Form>
   );
-
-  async function handleForm(e) {
-    e.preventDefault();
-    const form = e.target;
-    const body = new FormData(form);
-    try {
-      const response = await fetch(process.env.GATSBY_FORM_URL, {
-        method: "POST",
-        body,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-      console.log(response);
-    } catch (err) {
-      console.error(err);
-    }
-  }
 }

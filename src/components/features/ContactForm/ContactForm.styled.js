@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 
+import Typography from "#base/Typography.styled";
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -36,6 +38,8 @@ export const LabelText = styled.span`
   padding: 0;
   position: absolute;
 `;
+
+export const Message = styled(Typography)``;
 
 export const Textarea = styled.textarea`
   height: 6rem;
