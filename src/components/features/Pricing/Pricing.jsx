@@ -4,7 +4,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Column from "#base/Column.styled";
 import ContactForm from "#features/ContactForm/ContactForm";
 import Container from "#base/Container.styled";
-import Typography from "#base/Typography.styled";
 
 import usePricing from "./usePricing";
 
@@ -17,9 +16,6 @@ export default function Pricing() {
       <Container $row="2rem">
         <Column as="header" $sm="span 12">
           <h2>can't wait? book now!</h2>
-          <Typography as="p" $variant="h5">
-            Sessions start at $2,500
-          </Typography>
         </Column>
         <Styled.Content $sm="span 12" $md="span 6" $lg="span 6">
           <Styled.Subheading>
